@@ -56,7 +56,7 @@ class Validator
     {
         $this->model = $model;
 
-        if (!isset($model->validator)) {
+        if (property_exixts($model, 'validator') && !isset($model->validator)) {
             $model->validator = $this;
         }
 
